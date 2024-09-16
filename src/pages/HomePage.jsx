@@ -1,11 +1,12 @@
 import React from 'react'
 import Hero from '../component/Hero'
+import Header from '../UI/header/Header'
 
 const HomePage = () => {
     return (
         <div>
-            iljkhjgfdsz
             <Hero />
+            <Header/>
         </div>
     )
 }
