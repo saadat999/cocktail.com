@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div>
         <div className="container">
-            bhfdjlba
+            <input type="text" placeholder='Поиск' />
         </div>
     </div>
   )
