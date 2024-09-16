@@ -1,13 +1,13 @@
 import React from 'react'
-import Hero from '../component/Hero'
+import Hero from '../component/hero/Hero'
 import Header from '../UI/header/Header'
 import Footer from '../UI/footer/Footer'
 
 const HomePage = () => {
     return (
         <div>
-            <Header/>
             <Hero />
+            <Header/>
             <Footer/>
         </div>
     )
