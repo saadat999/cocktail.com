@@ -6,8 +6,8 @@ import Footer from '../UI/footer/Footer'
 const HomePage = () => {
     return (
         <div>
-            <Hero />
             <Header/>
+            <Hero />
             <Footer/>
         </div>
     )
