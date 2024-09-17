@@ -2,6 +2,8 @@ import React from 'react'
 import {Routes, Route} from "react-router-dom"
 import HomePage from '../pages/HomePage'
 import SecondPage from '../pages/SecondPage'
+import MenuPages from '../pages/MenuPage'
+import CocktailList from '../pages/CocktailList'
 
 
 const routes = [
@@ -14,7 +16,16 @@ const routes = [
         path: '/about',
         component: <SecondPage/>,
         key: 'second'
-
+    },
+    {
+        path: '/menu',
+        component: <MenuPages/>,
+        key: 'menu'
+    },
+    {
+        path: '/cocktail',
+        component: <CocktailList/>,
+        key: 'cocktail'
     }
 ]
  const AppRouter = () => {

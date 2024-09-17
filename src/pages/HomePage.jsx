@@ -13,8 +13,6 @@ const HomePage = () => {
             const response = await cocktail.fetchSearch()
             console.log(response);
             setData(response.drinks.slice(1, 10))
-            
-
         }
         fetchByCategory()
     }, [])
