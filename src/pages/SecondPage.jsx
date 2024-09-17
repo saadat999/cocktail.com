@@ -7,8 +7,6 @@ const SecondPage = () => {
         <div>
             <Header />
               <div>
-
-
                 
               </div>
             <Footer />
