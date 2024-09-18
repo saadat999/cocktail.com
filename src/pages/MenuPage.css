@@ -1,0 +1,32 @@
+.btn1 {
+    background-color: lightgray;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .active {
+    background-color: blue;
+    color: white;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .card1 {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .card1 img {
+    max-width: 100%;
+    height: auto;
+  }
+  

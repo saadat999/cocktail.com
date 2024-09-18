@@ -1,0 +1,29 @@
+.logo {
+    text-transform: uppercase;
+}
+
+.switches {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        margin-right: 20px;
+        color: white;
+        font-size: 20px;
+    }
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10px 25px 10px;
+}
+
+.aback {
+    background: rgb(49, 60, 117);
+    background: radial-gradient(circle, rgba(49, 60, 117, 0.4739145658263305) 0%, rgba(70, 92, 252, 1) 100%);
+    
+}
