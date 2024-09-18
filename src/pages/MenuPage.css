@@ -1,32 +1,64 @@
 .btn1 {
-    background-color: lightgray;
-    border: none;
-    padding: 10px;
-    margin: 5px;
+  background-color: lightgray;
+  border: none;
+  padding: 10px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: lightskyblue;
+  color: rgb(32, 36, 100);
+  padding: 12px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card1 {
+  border: 2px solid rgba(153, 159, 222, 0.473);
+  border-radius: 15px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.3s ease;
+}
+.card1:hover {
+  background-color: #a7acb97a; /* Цвет фона при наведении */
+    transform: scale(1.05);
+}
+
+.card1 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.menu {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  button {
+    background: rgba(84, 124, 236, 0.633);
+    border-radius: 15px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
-  
-  .active {
-    background-color: blue;
-    color: white;
+
+  button:hover {
+    /* background-color: #003fb5a1;  */
+    transform: scale(1.05);
+    color: rgb(16, 14, 14);
+    outline: black;
+    background: lightblue;
   }
-  
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .card1 {
-    border: 1px solid #ddd;
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .card1 img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+}

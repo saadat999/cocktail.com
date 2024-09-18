@@ -59,7 +59,7 @@ const Search = () => {
         return (
           <div className='container'>
             <h1>{el.strCategory}</h1>
-            <img src={el.strDrinkThumb} alt="" />
+            <img className='card' src={el.strDrinkThumb} alt="" />
           </div>
         )
       })}

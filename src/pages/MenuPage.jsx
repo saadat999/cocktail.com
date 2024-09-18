@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // React Router багыттоо хуксу
 import './MenuPage.css';
+import Header from '../UI/header/Header';
 
 const MenuPage = () => {
   const [drinks, setDrinks] = useState([]);
@@ -39,18 +40,22 @@ const MenuPage = () => {
   };
 
   return (
-    <div>
-      <div className="buttons">
-        <button onClick={() => handleCategoryChange('Champagne_flute')} className={category === 'Champagne_flute' ? 'active' : 'btn1'}>Champagne Flute</button>
-        <button onClick={() => handleCategoryChange('Cocktail_glass')} className={category === 'Cocktail_glass' ? 'active' : 'btn1'}>Cocktail Glass</button>
-        <button onClick={() => handleCategoryChange('Collins_glass')} className={category === 'Collins_glass' ? 'active' : 'btn1'}>Collins Glass</button>
-        <button onClick={() => handleCategoryChange('Beer_mug')} className={category === 'Beer_mug' ? 'active' : 'btn1'}>Beer Mug</button>
+    <>
+      <Header />
+      <div className='container'>
+        <div className="menu">
+          <div className="buttons">
+            <button onClick={() => handleCategoryChange('Champagne_flute')} className={category === 'Champagne_flute' ? 'active' : 'btn1'}>Champagne Flute</button>
+            <button onClick={() => handleCategoryChange('Cocktail_glass')} className={category === 'Cocktail_glass' ? 'active' : 'btn1'}>Cocktail Glass</button>
+            <button onClick={() => handleCategoryChange('Collins_glass')} className={category === 'Collins_glass' ? 'active' : 'btn1'}>Collins Glass</button>
+            <button onClick={() => handleCategoryChange('Beer_mug')} className={category === 'Beer_mug' ? 'active' : 'btn1'}>Beer Mug</button>
+          </div>
+        </div>
+        <div className="cards">
+          {renderDrinks()}
+        </div>
       </div>
-
-      <div className="cards">
-        {renderDrinks()}
-      </div>
-    </div>
+    </>
   );
 };
 

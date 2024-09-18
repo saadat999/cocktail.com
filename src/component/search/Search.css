@@ -1,7 +1,6 @@
 img {
-    width: 250px;
-    height: 250px;
-
+    max-width: 100%;
+    height: auto;
 }
 
 .search {
@@ -10,4 +9,9 @@ img {
     align-items: center;
     justify-content: center;
     padding: 150px;
+}
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }

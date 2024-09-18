@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css'
 import { SiBuymeacoffee } from "react-icons/si"
+import { NavLink } from 'react-router-dom'
 const Header = () => {
   return (
     <div className='aback'>
@@ -9,13 +10,13 @@ const Header = () => {
           cocktail <br />corner
         </div>
         <div className="switches">
-          <a href="">home</a>
-          <a href="">menu</a>
-          <a href="">pages</a>
-          <a href="">ingridients</a>
+          <NavLink to={'/'}>home</NavLink>
+          <NavLink to={'/menu'}>menu</NavLink>
+          <NavLink to={'/secondpage'}>pages</NavLink>
+          <NavLink to={'/cocktail'}>ingridients</NavLink>
         </div>
         <div className='cart'>
-          <SiBuymeacoffee >
+          <SiBuymeacoffee size={34} >
             <span>cart</span>
           </SiBuymeacoffee>
 
