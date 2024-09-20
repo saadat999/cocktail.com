@@ -1,38 +1,43 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-// import CocktailApi from './CocktailApi'; // API менен иштөө үчүн
-import  '../api/cocktail'
+
+import React, { useEffect, useState } from 'react'
 
 const CocktailList = () => {
-  const { id } = useParams(); // Маршруттан ID алуу
-  const [cocktail, setCocktail] = useState(null);
+  const id = localStorage.getItem('id')
+  const [data, setData] = useState([])
+  console.log(data, '----------usestate----------');
+  
 
+  const base_url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='
   useEffect(() => {
-    const fetchCocktailDetails = async () => {
-      const data = await cocktail.fetchCocktailDetails(id);
-      setCocktail(data.drinks[0]);
-    };
-    fetchCocktailDetails();
-  }, [id]);
+    fetchCategory()
+  }, [])
 
-  if (!cocktail) return <div>Loading...</div>;
+  const fetchCategory = () => {
+    fetch(base_url + id)
+      .then(res => res.json())
+      .then(res => {
+        console.log(res, '-----------data----------------');
+        setData(res.drinks)
+
+      })
+  }
 
   return (
-    <div className="cocktail-details">
-      <h2>{cocktail.strDrink}</h2>
-      <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
-      <h3>Ингредиенттер:</h3>
-      <ul>
-        {Object.keys(cocktail).map((key) => {
-          if (key.startsWith("strIngredient") && cocktail[key]) {
-            return <li key={key}>{cocktail[key]}</li>;
-          }
-          return null;
-          
-        })}
-      </ul>
-    </div>
-  );
-};
+    <div>
+      {data.map(el => {
+        return (
+          <div>
+            <h1>названия: {el.trDrink}</h1>
+            <img src={el.strDrinkThumb} alt="" />
+            <h1>класс: {el.strGlass}</h1>
+            <h1>Инструкция: {el.strInstructions}</h1>
 
-export default CocktailList;
+          </div>
+        )
+
+      })}
+    </div>
+  )
+}
+
+export default CocktailList

@@ -32,7 +32,8 @@ const MenuPage = () => {
   };
 
   const openIn = (idDrink) => {
-    navigate(`/cocktail/${idDrink}`); // React Router аркылуу багыттоо
+    navigate(`/cocktail`); // React Router аркылуу багыттоо
+    localStorage.setItem("id", idDrink)
   };
 
   const handleCategoryChange = (newCategory) => {
