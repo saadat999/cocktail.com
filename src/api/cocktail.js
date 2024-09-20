@@ -1,5 +1,4 @@
 import instanceAxios from "../axios/baseurl.js";
-
 class CocktailApi {
     async fetchSearch() {
         const response = await instanceAxios.get('filter.php?c=Ordinary_Drink');

@@ -28,6 +28,7 @@ const CocktailList = () => {
             return <li key={key}>{cocktail[key]}</li>;
           }
           return null;
+          
         })}
       </ul>
     </div>
