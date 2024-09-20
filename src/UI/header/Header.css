@@ -3,6 +3,7 @@
     font-family: "Kanit", sans-serif;
     font-weight: 800;
     color: midnightblue;
+
 }
 
 .switches {
@@ -37,11 +38,10 @@
 }
 
 .aback {
-    background: rgb(49, 60, 117);
     background: radial-gradient(circle, rgba(49, 60, 117, 0.4739145658263305) 0%, rgba(70, 92, 252, 1) 100%);
     position: fixed;
     top: 0px;
-    z-index: 1;
-    width: 100%;
+    z-index: 100;
+    width: 100%;    
 }
 

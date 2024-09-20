@@ -16,9 +16,11 @@ const Header = () => {
           <NavLink to={'/cocktail'}>ingridients</NavLink>
         </div>
         <div className='cart'>
-          <SiBuymeacoffee size={34} >
-            <span>cart</span>
-          </SiBuymeacoffee>
+          <NavLink to='/cart'>
+            <SiBuymeacoffee size={34} >
+              <span>cart</span>
+            </SiBuymeacoffee>
+          </NavLink>
 
         </div>
 

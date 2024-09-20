@@ -30,9 +30,11 @@
   cursor: pointer;
   transition: 0.3s ease, transform 0.3s ease;
 }
+
 .card1:hover {
-  background-color: #a7acb97a; /* Цвет фона при наведении */
-    transform: scale(1.05);
+  background-color: #a7acb97a;
+  /* Цвет фона при наведении */
+  transform: scale(1.05);
 }
 
 .card1 img {
@@ -61,4 +63,8 @@
     outline: black;
     background: lightblue;
   }
+}
+.card-menu {
+  display: flex;
+  flex-direction: column;
 }

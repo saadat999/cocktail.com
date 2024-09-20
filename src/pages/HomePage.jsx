@@ -18,7 +18,7 @@ const HomePage = () => {
     }, [])
 
     return (
-        <div>
+        <div >
             <Header />
             <Hero />
             {data.map(el => {

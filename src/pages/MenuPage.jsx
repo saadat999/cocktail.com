@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // React Router багыттоо хуксу
+import { NavLink, useNavigate } from 'react-router-dom'; // React Router багыттоо хуксу
 import './MenuPage.css';
 import Header from '../UI/header/Header';
 
@@ -20,25 +20,38 @@ const MenuPage = () => {
       .then((data) => setDrinks(data.drinks))
       .catch((error) => console.error('Error fetching data:', error));
   };
+  const fetchId = (id) => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+    cart.push(id);
+  
+    localStorage.setItem('cart', JSON.stringify(cart));
+  };
 
   const renderDrinks = () => {
     return drinks.map(({ strDrink, strDrinkThumb, idDrink }) => (
-      <div key={idDrink} className="card1" onClick={() => openIn(idDrink)}>
-        <img src={strDrinkThumb} alt={strDrink} />
-        <h1 id="price">$ {idDrink}</h1>
-        <h3 id="name">{strDrink}</h3>
+      <div className='card-menu'>
+        <div key={idDrink} className="card1" onClick={() => openIn(idDrink)}>
+          <img src={strDrinkThumb} alt={strDrink} />
+          <h1 id="price">$ {idDrink}</h1>
+          <h3 id="name">{strDrink}</h3>
+        </div>
+          <button  onClick={() => {
+            fetchId(idDrink)
+          }}>add to cart</button>
       </div>
     ));
   };
 
   const openIn = (idDrink) => {
-    navigate(`/cocktail`); // React Router аркылуу багыттоо
+    navigate(`/cocktail`);
     localStorage.setItem("id", idDrink)
   };
 
   const handleCategoryChange = (newCategory) => {
     setCategory(newCategory);
   };
+
 
   return (
     <>
