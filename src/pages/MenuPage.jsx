@@ -23,23 +23,32 @@ const MenuPage = () => {
   };
   const fetchId = (id) => {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  
+
     cart.push(id);
-  
+
     localStorage.setItem('cart', JSON.stringify(cart));
   };
 
   const renderDrinks = () => {
     return drinks.map(({ strDrink, strDrinkThumb, idDrink }) => (
+
+
       <div className='card-menu'>
-        <div key={idDrink} className="card1" onClick={() => openIn(idDrink)}>
+        <div  key={idDrink} className="card1" onClick={() => openIn(idDrink)}>
+
           <img src={strDrinkThumb} alt={strDrink} />
-          <h1 id="price">$ {idDrink}</h1>
-          <h3 id="name">{strDrink}</h3>
+
+
+          <h2 id="name">{strDrink}</h2>
+          <p id="price">$ {idDrink}</p>
+
         </div>
-          <button  onClick={() => {
-            fetchId(idDrink)
-          }}>add to cart</button>
+
+        <button className='add2cart' onClick={() => {
+          fetchId(idDrink)
+        }}>
+          add to cart
+        </button>
       </div>
     ));
   };
@@ -57,7 +66,7 @@ const MenuPage = () => {
   return (
     <>
       <Header />
-      <Search/>
+      <Search />
       <div className='container'>
         <div className="menu">
           <div className="buttons">

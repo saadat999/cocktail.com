@@ -53,7 +53,7 @@
     background: rgba(84, 124, 236, 0.633);
     border-radius: 15px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: ease 0.3s ;
   }
 
   button:hover {
@@ -67,4 +67,8 @@
 .card-menu {
   display: flex;
   flex-direction: column;
+  gap: 5px;
+}
+.add2cart {
+ margin-top: 50px;
 }

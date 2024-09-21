@@ -52,10 +52,10 @@ const Search = () => {
       <div className='search container'>
         <h3 className='search-title'>hghbj</h3>
         <p className='search-p'>vfj</p>
-        <input onChange={(e) => setLetter(e.target.value)} type="text" placeholder='Ищите...' />
+        <input onChange={(e) => setLetter(e.target.value)} type="text" placeholder='find...' />
         <button onClick={() => {
           searChLet()
-        }}>Искать</button>
+        }}>search</button>
       </div>
       {data.map(el => {
         return (
