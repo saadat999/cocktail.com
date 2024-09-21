@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom'; // React Router багыттоо хуксу
+import { NavLink, useNavigate } from 'react-router-dom'; 
 import './MenuPage.css';
 import Header from '../UI/header/Header';
 import Search from '../component/search/Search';
@@ -7,7 +7,7 @@ import Search from '../component/search/Search';
 const MenuPage = () => {
   const [drinks, setDrinks] = useState([]);
   const [category, setCategory] = useState('Champagne_flute');
-  const navigate = useNavigate(); // Багыттоо үчүн хук
+  const navigate = useNavigate(); 
 
   const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=';
 
@@ -40,6 +40,10 @@ const MenuPage = () => {
           <button class="button"  onClick={() => {
             fetchId(idDrink)
           }}> <span>Add to cart</span></button>
+
+          <button  onClick={() => {
+            fetchId(idDrink)
+          }}>add to cart</button>
       </div>
     ));
   };

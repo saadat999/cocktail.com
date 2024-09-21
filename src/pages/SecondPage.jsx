@@ -18,7 +18,7 @@ const SecondPage = () => {
       <Header />
       <Hero />
       <div>
-        <h1>Arsen</h1>
+        <h1></h1>
 
       </div>
       <Footer />

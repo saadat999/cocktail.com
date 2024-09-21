@@ -26,7 +26,8 @@ const Search = () => {
   return (
     <>
       <div className='search container'>
-        
+        <h3 className='search-title'>hghbj</h3>
+        <p className='search-p'>vfj</p>
         <input onChange={(e) => setLetter(e.target.value)} type="text" placeholder='Ищите...' />
         <button onClick={() => {
           searChLet()

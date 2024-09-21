@@ -34,8 +34,6 @@ const HomePage = () => {
                     </div>
                 )
             })}
-            <Search/>
-            <Cartichca/>
             <Banner/>
             <Footer />
         </div>

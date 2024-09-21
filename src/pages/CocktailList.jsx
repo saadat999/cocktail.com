@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react'
 
 const CocktailList = () => {
@@ -38,5 +39,4 @@ const CocktailList = () => {
     </div>
   )
 }
-
 export default CocktailList;

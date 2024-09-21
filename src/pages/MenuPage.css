@@ -67,7 +67,20 @@
     /* outline: black; */
     /* background: lightblue; */
   }
-}
+    background: rgba(84, 124, 236, 0.633);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  button:hover {
+    /* background-color: #003fb5a1;  */
+    transform: scale(1.05);
+    color: rgb(16, 14, 14);
+    outline: black;
+    background: lightblue;
+  }
+
 .card-menu {
   display: flex;
   flex-direction: column;
