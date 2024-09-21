@@ -48,23 +48,24 @@ const Search = () => {
 
 
   return (
-    <div className='search container'>
-      <h3 className='search-title'>hghbj</h3>
-      <p className='search-p'>vfj</p>
-      <input onChange={(e) => setLetter(e.target.value)} type="text" placeholder='Ищите...' />
-      <button onClick={() => {
-        searChLet()
-      }}>Искать</button>
+    <>
+      <div className='search container'>
+        <h3 className='search-title'>hghbj</h3>
+        <p className='search-p'>vfj</p>
+        <input onChange={(e) => setLetter(e.target.value)} type="text" placeholder='Ищите...' />
+        <button onClick={() => {
+          searChLet()
+        }}>Искать</button>
+      </div>
       {data.map(el => {
         return (
           <div className='container'>
-            <h1>{el.strCategory}</h1>
+            <h1 className='name'>{el.strCategory}</h1>
             <img className='card' src={el.strDrinkThumb} alt="" />
           </div>
         )
       })}
-
-    </div>
+    </>
   );
 };
 

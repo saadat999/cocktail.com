@@ -38,10 +38,12 @@
 }
 
 .aback {
-    background: radial-gradient(circle, rgba(49, 60, 117, 0.4739145658263305) 0%, rgba(70, 92, 252, 1) 100%);
+    /* background: radial-gradient(circle, rgba(49, 60, 117, 0.4739145658263305) 0%, rgba(70, 92, 252, 1) 100%); */
     position: fixed;
     top: 0px;
     z-index: 100;
     width: 100%;    
+    background: blue;
+  
 }
 

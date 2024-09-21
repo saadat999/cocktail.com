@@ -6,10 +6,13 @@ img {
 .search {
     display: flex;
     gap: 50px;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    padding: 150px;
+    padding-top: 150px;
+    /* flex-direction: column; */
+
 }
+
 .card {
     display: flex;
     flex-wrap: wrap;

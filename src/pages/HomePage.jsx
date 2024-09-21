@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import Header from '../UI/header/Header'
 import Hero from '../component/hero/Hero'
 import Footer from '../UI/footer/Footer'
+import Banner from '../component/banner2/Banner'
 // import cocktail from '../api/cocktail'
 // import { DATA_CONTEXT } from '../context/AppContext'
 
@@ -31,6 +32,7 @@ const HomePage = () => {
                     </div>
                 )
             })}
+            <Banner/>
             <Footer />
         </div>
     )

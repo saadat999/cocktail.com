@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom'; // React Router багыттоо хуксу
 import './MenuPage.css';
 import Header from '../UI/header/Header';
+import Search from '../component/search/Search';
 
 const MenuPage = () => {
   const [drinks, setDrinks] = useState([]);
@@ -56,6 +57,7 @@ const MenuPage = () => {
   return (
     <>
       <Header />
+      <Search/>
       <div className='container'>
         <div className="menu">
           <div className="buttons">
