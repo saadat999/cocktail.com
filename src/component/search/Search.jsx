@@ -1,27 +1,3 @@
-// import React from 'react'
-// import { Input } from 'antd'
-// import './Search.css'
-
-// const { Search: AntSearch } = Input
-
-// const Search = () => {
-//   return (
-//     <div className='search container'>
-//         <h3 className='search-title'>hghbj</h3>
-//         <p className='search-p'>vfj</p>
-//         <div id='my-input'>
-//             <AntSearch
-//             placeholder='Search...'
-//             allowClear onSearch={() = {
-//                 console.log('search');
-//             }} />
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default Search
-
 import React, { useEffect, useState } from 'react';
 import { Input } from 'antd';
 import './Search.css';
@@ -48,23 +24,23 @@ const Search = () => {
 
 
   return (
-    <div className='search container'>
-      <h3 className='search-title'>hghbj</h3>
-      <p className='search-p'>vfj</p>
-      <input onChange={(e) => setLetter(e.target.value)} type="text" placeholder='Ищите...' />
-      <button onClick={() => {
-        searChLet()
-      }}>Искать</button>
+    <>
+      <div className='search container'>
+        
+        <input onChange={(e) => setLetter(e.target.value)} type="text" placeholder='Ищите...' />
+        <button onClick={() => {
+          searChLet()
+        }}>Искать</button>
+      </div>
       {data.map(el => {
         return (
           <div className='container'>
-            <h1>{el.strCategory}</h1>
-            <img src={el.strDrinkThumb} alt="" />
+            <h1 className='name'>{el.strCategory}</h1>
+            <img className='card' src={el.strDrinkThumb} alt="" />
           </div>
         )
       })}
-
-    </div>
+    </>
   );
 };
 

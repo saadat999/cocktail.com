@@ -6,8 +6,6 @@ const App = () => {
     <div>
       <AppRouter />
 
-
-
     </div>
   )
 }

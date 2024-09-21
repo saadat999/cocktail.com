@@ -1,6 +1,11 @@
-
-.LALA {
-    width: 1440px ;
-    height: 750px !important; 
+.banner {
+    width: 100% ;
+    /* height: 750px !important;  */
     margin: auto;
+    padding-top: 85px;
+}
+
+.banner-img {
+    width: 1440px;
+    height: 650px;
 }

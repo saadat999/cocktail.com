@@ -1,13 +1,10 @@
 .section {
     width: 100%;
     height: 500px;
-    background-color: #8558BC;
+    background-color: #1E90FF;
 
     display: flex;
     justify-content: end;
     align-items: center;
 }
 
-iframe {
-    
-}

@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useState } from 'react'
 import Header from '../UI/header/Header'
 import Hero from '../component/hero/Hero'
 import Footer from '../UI/footer/Footer'
+import Banner from '../component/banner2/Banner'
+import Search from '../component/search/Search'
+import Cartichca from '../component/cartichca/Cartichca'
 // import cocktail from '../api/cocktail'
 // import { DATA_CONTEXT } from '../context/AppContext'
 
@@ -18,7 +21,7 @@ const HomePage = () => {
     }, [])
 
     return (
-        <div>
+        <div >
             <Header />
             <Hero />
             {data.map(el => {
@@ -31,9 +34,12 @@ const HomePage = () => {
                     </div>
                 )
             })}
+            <Search/>
+            <Cartichca/>
+            <Banner/>
             <Footer />
         </div>
     )
 }
 
-export default HomePage
+export default HomePage;

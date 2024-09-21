@@ -4,6 +4,7 @@ import HomePage from '../pages/HomePage'
 import SecondPage from '../pages/SecondPage'
 import MenuPages from '../pages/MenuPage'
 import CocktailList from '../pages/CocktailList'
+import Cart from '../pages/Cart'
 
 const routes = [
     {
@@ -19,13 +20,20 @@ const routes = [
     {
         path: '/menu',
         component: <MenuPages />,
-            key: 'menu'
+        key: 'menu'
     },
     {
-    path: '/cocktail',
+        path: '/cocktail',
         component: <CocktailList />,
-            key: 'cocktail'
-    }
+        key: 'cocktail'
+    },
+    {
+        path: '/cart',
+        component: <Cart/>,
+        key: 'cart'
+    },
+    
+
 ]
 const AppRouter = () => {
     return (
