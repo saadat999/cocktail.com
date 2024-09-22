@@ -1,11 +1,20 @@
 
 import React, { useEffect, useState } from 'react'
+import { Card, Typography } from 'antd';
+import { SmileFilled, SmileOutlined } from '@ant-design/icons';
+import Header from '../UI/header/Header';
+import Footer from '../UI/footer/Footer';
+
+
 
 const CocktailList = () => {
   const id = localStorage.getItem('id')
   const [data, setData] = useState([])
   console.log(data, '----------usestate----------');
-  
+  const { Meta } = Card;
+  const { Paragraph, Text } = Typography;
+
+
 
   const base_url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='
   useEffect(() => {
@@ -27,11 +36,22 @@ const CocktailList = () => {
       {data.map(el => {
         return (
           <div>
-            <h1>названия: {el.trDrink}</h1>
-            <img src={el.strDrinkThumb} alt="" />
-            <h1>класс: {el.strGlass}</h1>
-            <h1>Инструкция: {el.strInstructions}</h1>
+            <Header/>
+            <Card
+              hoverable
+              style={{
+                width: 240,
+                marginBottom: 100,
+                marginTop: 100,
+              }}
+              cover={<img alt="example" src={el.strDrinkThumb} />}
+            >
+              <Meta title={el.strDrink}  />
+              <Paragraph copyable>{el.strInstructions}</Paragraph>
 
+            </Card>
+
+            <Footer/>
           </div>
         )
 
@@ -39,5 +59,4 @@ const CocktailList = () => {
     </div>
   )
 }
-
-export default CocktailList
+export default CocktailList;

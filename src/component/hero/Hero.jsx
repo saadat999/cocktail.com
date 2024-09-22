@@ -17,6 +17,7 @@ const Hero = () => {
           {/* <div className='banner'> */}
             <div>
               <img className='banner-img' id='img' src={'/src/assets/c4.jpg'} style={contentStyle} alt="Cocktail 1" />
+              
             </div>
             <div>
               <img className='banner-img' id='img' src={'/src/assets/c2.png'} style={contentStyle} alt="Cocktail 2" />
@@ -27,6 +28,7 @@ const Hero = () => {
             <div>
               <img className='banner-img' id='img' src={'/src/assets/c1.avif'} style={contentStyle} alt="Cocktail 4" />
             </div>
+            
 
           {/* </div> */}
 

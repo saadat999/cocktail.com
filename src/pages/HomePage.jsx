@@ -3,6 +3,7 @@ import Header from '../UI/header/Header'
 import Hero from '../component/hero/Hero'
 import Footer from '../UI/footer/Footer'
 import Banner from '../component/banner2/Banner'
+import Search from '../component/search/Search'
 // import cocktail from '../api/cocktail'
 // import { DATA_CONTEXT } from '../context/AppContext'
 
@@ -38,4 +39,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default HomePage;

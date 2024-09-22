@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
-
+import './Cart.css'
+import { LiaSmileBeam } from 'react-icons/lia';
+import Header from '../UI/header/Header';
+import Footer from '../UI/footer/Footer';
 const Cart = () => {
     const [data, setData] = useState([]);
     const ids = JSON.parse(localStorage.getItem('cart')) || [];
@@ -13,7 +16,7 @@ const Cart = () => {
                 );
 
                 const drinksData = responses.map(res => res.drinks[0]);
-                setData(drinksData); 
+                setData(drinksData);
             } catch (error) {
                 console.error('Ошибка при загрузке данных:', error);
             }
@@ -28,24 +31,34 @@ const Cart = () => {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         const updatedCart = cart.filter(item => item !== id);
         localStorage.setItem('cart', JSON.stringify(updatedCart));
-        setData(data.filter(item => item.idDrink !== id)); 
+        setData(data.filter(item => item.idDrink !== id));
     };
 
     return (
-        <div className='container'>
-            {data.length > 0 ? (
-                data.map((el, index) => (
-                    <div key={index}>
-                        <h1>{el.strDrink}</h1>
-                        <img src={el.strDrinkThumb} alt={el.strDrink} />
-                        
-                        <button onClick={() => deleteCart(el.idDrink)}>Удалить</button>
-                    </div>
-                ))
-            ) : (
-                <p>Ваша корзина пуста.</p>
-            )}
-        </div>
+        <>
+            <Header />
+
+            <div className='container cartttttt'>
+                {data.length > 0 ? (
+                    data.map((el, index) => (
+                        <div className='corzina' key={index}>
+
+                            <h1 className='name-cart-card'>{el.strDrink}</h1>
+                            <img className='in-cart' src={el.strDrinkThumb} alt={el.strDrink} />
+                            <div className='btn-remove'>
+
+                                <button className='remove' onClick={() => deleteCart(el.idDrink)}>remove</button>
+                            </div>
+                        </div>
+                    ))
+                ) : (
+                    <p>Add something yummy <span><LiaSmileBeam size={24} color='brown' />
+                    </span></p>
+
+                )}
+            </div>
+            <Footer />
+        </>
     );
 };
 

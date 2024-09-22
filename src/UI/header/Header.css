@@ -1,49 +1,84 @@
-.logo {
-    text-transform: uppercase;
-    font-family: "Kanit", sans-serif;
-    font-weight: 800;
-    color: midnightblue;
-
+.tracking-in-expand { 
+    text-transform: uppercase; 
+    font-family: "Kanit", sans-serif; 
+    font-weight: 800; 
+    /* color: black; */ 
+    color: #ffffff; 
+ 
+} 
+ 
+.tracking-in-expand { 
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both; 
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both; 
+} 
+ 
+ 
+@-webkit-keyframes tracking-in-expand { 
+    0% { 
+        letter-spacing: -0.5em; 
+        opacity: 0; 
+    } 
+ 
+    40% { 
+        opacity: 0.6; 
+    } 
+ 
+    100% { 
+        opacity: 1; 
+    } 
+} 
+ 
+@keyframes tracking-in-expand { 
+    0% { 
+        letter-spacing: -0.5em; 
+        opacity: 0; 
+    } 
+ 
+    40% { 
+        opacity: 0.6; 
+    } 
+ 
+    100% { 
+        opacity: 1; 
+    } 
+} 
+ 
+.switches { 
+ 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+ 
+    a { 
+        margin-right: 20px; 
+        color: #ffffff; 
+        background: none; 
+        font-size: 20px; 
+        text-decoration: none; 
+        transition: color 0.3s ease, transform 0.3s ease; 
+        font-family: "Poppins", sans-serif; 
+    } 
+ 
+    a:hover { 
+        color: #ffffff; 
+        transform: scale(1.1); 
+        font-size: 20px; 
+        font-weight: 400; 
+        font-family: "Poppins", sans-serif; 
+    } 
+} 
+ 
+.head { 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 25px 10px 15px 10px; 
+} 
+ 
+.aback { 
+    /* background: radial-gradient(circle, rgba(49, 60, 117, 0.4739145658263305) 0%, rgba(70, 92, 252, 1) 100%); */ 
+    position: fixed; 
+    top: 0px; 
+    z-index: 100; 
+    width: 100%; 
+    background: #1F456E; 
 }
-
-.switches {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    a {
-        margin-right: 20px;
-        color: rgba(5, 5, 45, 0.586);
-        background: none;
-        font-size: 20px;
-        text-decoration: none;
-        transition: color 0.3s ease, transform 0.3s ease;
-        font-family: "Poppins", sans-serif;
-    }
-
-    a:hover {
-        color: rgb(21, 21, 96);
-        transform: scale(1.1);
-        font-size: 20px;
-        font-weight: 400;
-        font-family: "Poppins", sans-serif;
-    }
-}
-
-.head {
-    display: flex;
-    justify-content: space-between;
-    padding: 25px 10px 15px 10px;
-}
-
-.aback {
-    /* background: radial-gradient(circle, rgba(49, 60, 117, 0.4739145658263305) 0%, rgba(70, 92, 252, 1) 100%); */
-    position: fixed;
-    top: 0px;
-    z-index: 100;
-    width: 100%;    
-    background: blue;
-  
-}
-

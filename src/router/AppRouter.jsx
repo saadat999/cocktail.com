@@ -1,10 +1,10 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom"
 import HomePage from '../pages/HomePage'
-import SecondPage from '../pages/SecondPage'
 import MenuPages from '../pages/MenuPage'
 import CocktailList from '../pages/CocktailList'
 import Cart from '../pages/Cart'
+import RandomPage from '../pages/RandomPage'
 
 const routes = [
     {
@@ -13,9 +13,9 @@ const routes = [
         key: 'homepage'
     },
     {
-        path: '/secondpage',
-        component: <SecondPage />,
-        key: 'secondpage'
+        path: '/randompage',
+        component: <RandomPage/>,
+        key: 'randompage',
     },
     {
         path: '/menu',
